@@ -13,7 +13,9 @@ gem "lita-karotz_deploy_hook"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+Lita.configure do |config|
+  config.handlers.karotz_deploy_hook.karotz_deployment_endpoint = "http://my-karotz-app.com/deployments"
+end
 
 ## Usage
 
