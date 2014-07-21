@@ -4,7 +4,7 @@ module Lita
   module Handlers
     class KarotzDeployHook < Handler
       def self.default_config(config)
-        config.karotz_deployment_endpoint = ''
+        config.karotz_deployment_endpoint = nil
       end
 
       route(/(.*) is starting deploy of '(.*)' from branch '(.*)' to (.*)/i, :notify_karotz, command: false,
@@ -21,7 +21,7 @@ module Lita
     private
 
       def karotz_deployment_endpoint
-        Lita.config.handlers.karotz_deploy_hook.karotz_deployment_endpoint
+        Lita.config.handlers.karotz_deploy_hook.karotz_deployment_endpoint || raise("Karotz deployment endpoint URL is required.")
       end
 
       def query_string(hash)
