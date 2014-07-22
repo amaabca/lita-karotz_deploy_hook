@@ -13,11 +13,15 @@ gem "lita-karotz_deploy_hook"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+Lita.configure do |config|
+  config.handlers.karotz_deploy_hook.karotz_deployment_endpoint = "http://my-karotz-app.com/deployments"
+end
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+The deployment message we use, which gets matched is in the form:
+
+User_Name is starting deploy of 'project_name' from branch 'branch_name' to environment_name
 
 ## License
 
