@@ -26,7 +26,7 @@ module Lita
 
       def query_string(hash)
         hash.map do |key, value|
-          "#{key}=#{value}"
+          "#{key}=#{URI.escape value}"
         end.join "&"
       end
     end
