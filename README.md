@@ -19,7 +19,9 @@ end
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+The deployment message we use, which gets matched is in the form:
+
+User_Name is starting deploy of 'project_name' from branch 'branch_name' to environment_name
 
 ## License
 
